@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   z2.c                                               :+:      :+:    :+:   */
+/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: batu <batu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/04 14:41:57 by batu              #+#    #+#             */
-/*   Updated: 2025/08/04 14:42:01 by batu             ###   ########.fr       */
+/*   Created: 2025/08/19 19:54:13 by batu              #+#    #+#             */
+/*   Updated: 2025/08/19 20:02:32 by batu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_print_alphabet(void)
+void ft_print_alphabet(void)
 {
-	char	letter;
+	char	c;
 
-	letter = 'a';
-	while (letter <= 'z')
+	c = 'a';
+
+	while (c <= 'z')
 	{
-		write(1, &letter, 1);
-		letter++;
+		write(1, &c, 1);
+		c--;
 	}
 }
 

@@ -1,28 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: batu <batu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/07 19:25:33 by batu              #+#    #+#             */
-/*   Updated: 2025/08/07 19:46:28 by batu             ###   ########.fr       */
+/*   Created: 2025/08/18 15:33:46 by batu              #+#    #+#             */
+/*   Updated: 2025/08/18 16:01:23 by batu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd.h>
+#include <unistd.h>
 
-void ft_is_negative(int n)
+void	ft_putchar(char c)
 {
-    if (n < 0){
-      write(1, 'N', 1);  
-    }
-    else{
-        write(1, 'P', 1);
-    }
+	write(1, &c, 1);
 }
 
-int main(void){
-    ft_is_negative(5);
-    return(0);
+void	ft_putstr(char *str)
+{
+	while (*str != '\0')
+	{
+		ft_putchar(*str);
+		str++;
+	}
+}
+
+int	main(void)
+{
+	char	*str;
+
+	str = "Cey \0da";
+	ft_putstr(str);
 }

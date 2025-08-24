@@ -1,30 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_reverse_alphabet.c                        :+:      :+:    :+:   */
+/*   ft_print_comb2.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: batu <batu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/06 23:13:24 by batu              #+#    #+#             */
-/*   Updated: 2025/08/06 23:27:56 by batu             ###   ########.fr       */
+/*   Created: 2025/08/15 16:06:08 by batu              #+#    #+#             */
+/*   Updated: 2025/08/15 16:35:09 by batu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_print_alphabet(void)
+void	ft_print_comb2(void)
 {
-	char	c ;
+	char	a;
+	char	b;
 
-	c = 'z';
-	while (c => 'z')
+	a = '0';
+	b = '0';
+	while (a <= '9')
 	{
-		write(1, &c, 1);
-		c--;
+		write(1, &a, 1);
+		write(1, &b, 1);
+		if (b == '9')
+		{
+			a++;
+			b = '0';
+		}
+		if (a != 9 || b != 9)
+			write(1, ", ", 2);
+		b++;
 	}
 }
 
-int main(void){
-    ft_print_alphabet();
-    return(0);
+int	main(void)
+{
+	ft_print_comb2();
 }
