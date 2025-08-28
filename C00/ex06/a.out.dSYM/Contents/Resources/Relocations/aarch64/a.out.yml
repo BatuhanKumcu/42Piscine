@@ -1,0 +1,8 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     a.out
+relocations:
+  - { offset: 0x26, size: 0x8, addend: 0x0, symName: _ft_print_comb2, symObjAddr: 0x0, symBinAddr: 0x100003EA0, symSize: 0xE0 }
+  - { offset: 0x41, size: 0x8, addend: 0x0, symName: _ft_print_comb2, symObjAddr: 0x0, symBinAddr: 0x100003EA0, symSize: 0xE0 }
+  - { offset: 0x73, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0xE0, symBinAddr: 0x100003F80, symSize: 0x18 }
+...

@@ -1,39 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_str_is_lowercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: batuhankumcu <batuhankumcu@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/18 18:06:29 by batu              #+#    #+#             */
-/*   Updated: 2025/08/26 11:38:11 by batuhankumc      ###   ########.fr       */
+/*   Created: 2025/08/27 14:00:19 by batuhankumc       #+#    #+#             */
+/*   Updated: 2025/08/27 14:04:19 by batuhankumc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-char	*ft_strcpy(char *dest, char *src)
+int ft_str_is_lowercase(char *str)
 {
-	char	i;
+    int i;
 
-	i = 0;
-	while (src[i] != 0)
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
+    i = 0;
+    while (str[i] != 0)
+    {
+        if (str[i] < 'a' || str[i] > 'z')
+            return (0);
+        i++;
+    }
+    return (1);
 }
 
-#include <stdio.h>
-
-int	main(void)
+int main(void)
 {
-	char	dest[] = "selam";
-	char	src[] = "Merhaba";
+    char    str[] = "selam";
+    char    str1[] = "selaAAm";
 
-	printf("Before: dest = %s, src = %s\n", dest, src);
-	ft_strcpy(dest, src);
-	printf("After: dest = %s, src = %s", dest, src);
+    ft_str_is_lowercase(str);
+    ft_str_is_lowercase(str1);
+    printf("%d\n", ft_str_is_lowercase(str));
+    printf("%d", ft_str_is_lowercase(str1));
 }

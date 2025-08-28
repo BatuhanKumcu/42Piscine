@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: batuhankumcu <batuhankumcu@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/18 18:06:29 by batu              #+#    #+#             */
-/*   Updated: 2025/08/26 11:38:11 by batuhankumc      ###   ########.fr       */
+/*   Created: 2025/08/26 11:42:08 by batuhankumc       #+#    #+#             */
+/*   Updated: 2025/08/27 11:03:22 by batuhankumc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-char	*ft_strcpy(char *dest, char *src)
+char *ft_strncpy(char *dest, char *src, unsigned int n)
 {
 	char	i;
 
@@ -21,6 +21,9 @@ char	*ft_strcpy(char *dest, char *src)
 	{
 		dest[i] = src[i];
 		i++;
+        if (src[n] == 0)
+            return(dest);
+		n++;
 	}
 	dest[i] = '\0';
 	return (dest);
@@ -32,8 +35,9 @@ int	main(void)
 {
 	char	dest[] = "selam";
 	char	src[] = "Merhaba";
+	int	n = 3;
 
 	printf("Before: dest = %s, src = %s\n", dest, src);
-	ft_strcpy(dest, src);
+	ft_strncpy(dest, src, n);
 	printf("After: dest = %s, src = %s", dest, src);
 }

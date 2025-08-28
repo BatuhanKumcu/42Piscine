@@ -1,39 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strcapitalize.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: batuhankumcu <batuhankumcu@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/18 18:06:29 by batu              #+#    #+#             */
-/*   Updated: 2025/08/26 11:38:11 by batuhankumc      ###   ########.fr       */
+/*   Created: 2025/08/28 12:33:07 by batuhankumc       #+#    #+#             */
+/*   Updated: 2025/08/28 12:47:45 by batuhankumc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-char	*ft_strcpy(char *dest, char *src)
+char *ft_strcapitalize(char *str)
 {
-	char	i;
+    int i;
 
-	i = 0;
-	while (src[i] != 0)
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
+    i = 0;
+    while (str[i] != 0)
+    {
+        while (str[i] > 122 && str[i] < 97 || str[i] > 90 && str[i] < 65)
+        {
+            if (str[i] <= 122 && str[i] >= 97)
+                str[i] = str[i] - 32;
+            i++;
+        }
+        i++;
+    }
+    return (str);
 }
 
 #include <stdio.h>
 
-int	main(void)
+int main(void)
 {
-	char	dest[] = "selam";
-	char	src[] = "Merhaba";
-
-	printf("Before: dest = %s, src = %s\n", dest, src);
-	ft_strcpy(dest, src);
-	printf("After: dest = %s, src = %s", dest, src);
+    char    str[] = "selma arkdas 1 2 lers";
+    
+    printf("%s", ft_strcapitalize(str));
 }
