@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: batu <batu@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: batuhankumcu <batuhankumcu@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/16 16:28:25 by batu              #+#    #+#             */
-/*   Updated: 2025/08/16 16:40:07 by batu             ###   ########.fr       */
+/*   Updated: 2025/08/28 14:37:58 by batuhankumc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,13 @@ void ft_ultimate_div_mod(int *a, int *b)
 
 int	main(void)
 {
-	int	*a;
-	int	*b;
-	
-	*a = 27;
-	*b = 5;
-	ft_ultimate_div_mod(a, b);
-	printf("%d\n", *a);
-	printf("%d\n", *b);
+	int	a = 26;
+	int	b = 3;
+	int	*x = &a;
+	int	*y = &b;
+
+	ft_ultimate_div_mod(x, y);
+	printf("%d\n", *x);
+	printf("%d\n", *y);
 	return(0);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: batu <batu@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: batuhankumcu <batuhankumcu@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/12 18:06:56 by batu              #+#    #+#             */
-/*   Updated: 2025/08/12 18:23:12 by batu             ###   ########.fr       */
+/*   Updated: 2025/08/29 13:57:17 by batuhankumc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,4 +20,4 @@ void	ft_putchar(char c)
 /*int    main(void){
     ft_putchar('c');
     return 0;
-}*/
+}*/ 

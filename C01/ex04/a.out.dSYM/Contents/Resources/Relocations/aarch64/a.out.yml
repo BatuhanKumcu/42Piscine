@@ -1,0 +1,8 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     a.out
+relocations:
+  - { offset: 0x26, size: 0x8, addend: 0x0, symName: _ft_ultimate_div_mod, symObjAddr: 0x0, symBinAddr: 0x100003E98, symSize: 0x64 }
+  - { offset: 0x41, size: 0x8, addend: 0x0, symName: _ft_ultimate_div_mod, symObjAddr: 0x0, symBinAddr: 0x100003E98, symSize: 0x64 }
+  - { offset: 0x8F, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x64, symBinAddr: 0x100003EFC, symSize: 0x94 }
+...
