@@ -1,30 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_print_program_name.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: batu <batu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/29 12:14:14 by batuhankumc       #+#    #+#             */
-/*   Updated: 2025/08/31 19:13:26 by batu             ###   ########.fr       */
+/*   Created: 2025/09/04 17:40:47 by batu              #+#    #+#             */
+/*   Updated: 2025/09/04 21:51:21 by batu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_strcmp(char *s1, char *s2)
+#include <unistd.h>
+
+
+
+int	main(int	argc, char	**argv)
 {
-    unsigned int i;
-
-    i = 0;
-    while (s1[i] == s2[i] && s1[i] != 0 || s2[i] != 0)
-    {
-        i++;   
-    }
-    return (s1[i] - s2[i]);
-}
-
-#include <stdio.h>
-
-int main(void)
-{
-    printf("%d\n", ft_strcmp("merha1111", "merha111"));
+	
 }
