@@ -6,7 +6,7 @@
 /*   By: batu <batu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/18 15:33:46 by batu              #+#    #+#             */
-/*   Updated: 2025/08/18 16:01:23 by batu             ###   ########.fr       */
+/*   Updated: 2025/09/27 21:57:32 by batu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,6 @@ int	main(void)
 {
 	char	*str;
 
-	str = "Cey \0da";
+	str = "zeynep sare selamlar";
 	ft_putstr(str);
 }

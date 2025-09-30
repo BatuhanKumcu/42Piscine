@@ -6,7 +6,7 @@
 /*   By: batu <batu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/18 16:09:31 by batu              #+#    #+#             */
-/*   Updated: 2025/08/18 17:50:14 by batu             ###   ########.fr       */
+/*   Updated: 2025/09/30 21:54:10 by batu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,37 +26,25 @@ void	ft_rev_int_tab(int *tab, int size)
 
 	start = 0;
 	end = size - 1;
-	while (start < size / 2)
+	while (start <= size / 2) // sizeın yarısından küçük olacağı kadar swap yapılır cünkü o kadar yeterli
 	{
 		ft_swap(&tab[start], &tab[end]);
-		start++;
-		end--;
+		start++; //başı sona doğru getiriyoruz
+		end--; //sonu başa doğru
 	}
 }
 
 #include <stdio.h>
 
-void	putarr(int arr[], int size)
-{
-	int	i;
-
-	i = 0;
-	while (i < (size - 1))
-	{
-		printf("%d", arr[i]);
-		i++;
-	}
-	printf("%d\n", arr[size - 1]);
-}
 
 int	main(void)
 {
 	int	s;
-	int	t[]= {1, 2, 3, 4, 5};
+	int	t[]= {1, 2, 3, 4, 5, 6};
 	int	i;
 
 	i = 0;
-	s = 5;
+	s = 6;
 
 	printf("Original Array = ");
 
@@ -68,6 +56,11 @@ int	main(void)
 
 	printf("\nReversed Array = ");
 	ft_rev_int_tab(t, s);
-	putarr(t, s);
+	i = 0;
+	while (i < s)
+	{
+		printf("%d, ", t[i]);
+		i++;
+	}
 	return (0);
 }
